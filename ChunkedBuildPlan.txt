@@ -1,0 +1,8 @@
+CHUNKED BUILD PLAN:
+1. Set up GitHub repository and Java project with a proper README file.
+2. Create an Expense class with defined attributes, accessor/mutator methods, and a constructor.
+3. Build a command-line menu.
+4. Implement adding/viewing expenses.
+5. Implement expense categories and deletion.
+6. Implement calculations of different totals.
+7. Add file storage and test the fully completed program.
