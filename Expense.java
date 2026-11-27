@@ -1,8 +1,8 @@
 import java.text.NumberFormat;
 import java.time.LocalDate;
-import java.util.Locale;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 /* Class for a single expense in the ledger
 * @author Gabriel Rodriguez
@@ -92,7 +92,7 @@ public class Expense {
     }
 
     //CSV to String methods
-    private List<String> splitCSV(String line) {
+    private static List<String> splitCSV(String line) {
         List<String> result = new ArrayList<>();
         StringBuilder current = new StringBuilder();
         boolean inQuotes = false;
@@ -110,7 +110,7 @@ public class Expense {
         result.add(current.toString());
         return result;
     }
-    public Expense convertFromCSV(String line) {
+    public static Expense convertFromCSV(String line) {
         List<String> fields = splitCSV(line);
         if (fields.size() != 5) {
             throw new IllegalArgumentException("Expected 5 fields but found " + fields.size());
